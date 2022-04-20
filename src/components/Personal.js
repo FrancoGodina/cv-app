@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 function Personal (props) {
     const [name, setName] = useState("");
+    const [title, setTitle] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [description, setDescription] = useState("");
@@ -9,6 +10,7 @@ function Personal (props) {
     useEffect(() => {
         if(!(props.personalInformation.name === "")) {
             setName(props.personalInformation.name);
+            setTitle(props.personalInformation.title);
             setEmail(props.personalInformation.email);
             setPhone(props.personalInformation.phone);
             setDescription(props.personalInformation.description);
@@ -25,6 +27,13 @@ function Personal (props) {
                     placeholder="Full Name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Title goes here"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
                 />
                 <input
                     type="text"
@@ -52,6 +61,7 @@ function Personal (props) {
                 onClick={() =>
                     props.handleSavePersonalInformation(
                         name,
+                        title,
                         email,
                         phone,
                         description

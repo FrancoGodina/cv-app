@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Personal from "./components/Personal"
 import Education from "./components/Education"
+import Displaycv from "./components/Displaycv";
 import {v4 as uuidv4} from "uuid";
 
 
@@ -10,17 +11,19 @@ function App(){
   const[personalInformation, setPersonalInformation] = useState({
     id: uuidv4(),
     name: "",
-    phone: "",
+    title: "",
     email: "",
+    phone: "",
     description: ""
   });
 
-  const handleSavePersonalInformation = (nameIn , phoneIn, emailIn, descriptionIn) => {
+  const handleSavePersonalInformation = (nameIn , titleIn, emailIn, phoneIn, descriptionIn) => {
 
     const updatedPersonalInformation = { ...personalInformation };
     updatedPersonalInformation.name = nameIn;
-    updatedPersonalInformation.phone = phoneIn;
+    updatedPersonalInformation.title = titleIn;
     updatedPersonalInformation.email = emailIn;
+    updatedPersonalInformation.phone = phoneIn;
     updatedPersonalInformation.description = descriptionIn;
 
     setPersonalInformation(updatedPersonalInformation);
@@ -34,7 +37,7 @@ function App(){
   })
 
   const handleSaveEducationInformation = (schoolIn, titleIn, dateIn) => {
-    
+
     const updatedEducationInformation = { ...educationInformation};
     updatedEducationInformation.school = schoolIn;
     updatedEducationInformation.title = titleIn;
@@ -58,6 +61,12 @@ function App(){
               Add Experience
             </button>
             </div>
+        </div>
+        <div>
+          <Displaycv 
+            personalInformation={personalInformation} 
+            educationInformation={educationInformation}
+          />
         </div>
       </main>
     </div>

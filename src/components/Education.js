@@ -40,7 +40,7 @@ function Education(props){
                 />
             </form>
             <button
-                onClick={() => props.handleSaveEducation (school, title, date) } >
+                onClick={() => props.handleSaveEducationInformation (school, title, date) } >
                 Save
             </button>
         </div>
