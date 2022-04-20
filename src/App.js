@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Personal from "./components/Personal"
+import Education from "./components/Education"
 import {v4 as uuidv4} from "uuid";
 
 
@@ -25,6 +26,23 @@ function App(){
     setPersonalInformation(updatedPersonalInformation);
   }
 
+  const [educationInformation, setEducationInformation] = useState({
+    id: uuidv4(),
+    school: "",
+    title: "",
+    date: ""
+  })
+
+  const handleSaveEducationInformation = (schoolIn, titleIn, dateIn) => {
+    
+    const updatedEducationInformation = { ...educationInformation};
+    updatedEducationInformation.school = schoolIn;
+    updatedEducationInformation.title = titleIn;
+    updatedEducationInformation.date = dateIn;
+
+    setEducationInformation(updatedEducationInformation);
+  }
+
   return(
     <div>
       <header>CV creator</header>
@@ -32,6 +50,9 @@ function App(){
         <div>
           <Personal handleSavePersonalInformation={handleSavePersonalInformation} personalInformation={personalInformation}/>
           <div>
+        <div>
+          <Education handleSaveEducationInformation={handleSaveEducationInformation} educationInformation={educationInformation}/>
+        </div>
             <h3>Experience(s)</h3>
             <button>
               Add Experience
