@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# CV-APP
+[Live Demo](https://francogodina.github.io/cv-app/)
+In this project I show off my React + React Hooks skills.
+This app allows users to create their own resume.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
