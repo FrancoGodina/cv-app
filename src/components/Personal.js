@@ -19,7 +19,7 @@ function Personal (props) {
 
     return(
         <div>
-            <form>
+            <form className="form">
                 <h3>Personal Information</h3>
                 <input
                     type="text"
@@ -57,7 +57,7 @@ function Personal (props) {
                     onChange={(e) => setDescription(e.target.value)}
                 />
             </form>
-            <button
+            <button className="save"
                 onClick={() =>
                     props.handleSavePersonalInformation(
                         name,

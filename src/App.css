@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: brown;
+    color: white;
+    height: 75px;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:blanchedalmond;
+}
+
+.input-container {
+    width:500px;
+    margin: 15px;
+    border: solid black 2.5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    border-radius:5px;
+}
+.output-container {
+    width:500px;
+    margin: 15px;
+    border: solid black 2.5px;
+    margin-left: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.save {
+    height: 40px;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+.save-experience {
+    height:40px;
+    width:100%;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+.delete-experience {
+    height:40px;
+    width:100%;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+}
+.add-experience {
+    height: 40px;
+    width:100%;
+    background-color: #008CBA;
+    color: white;
+    cursor: pointer;
+}
+
+.form {
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.display-container {
+    
+}
+
+.display-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5px;
+}

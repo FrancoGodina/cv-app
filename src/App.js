@@ -5,6 +5,7 @@ import Education from "./components/Education"
 import Experience from "./components/Experience";
 import Displaycv from "./components/Displaycv";
 import {v4 as uuidv4} from "uuid";
+import "./App.css";
 
 
 function App(){
@@ -99,13 +100,13 @@ function App(){
 
   return(
     <div>
-      <header>CV creator</header>
-      <main>
-        <div>
+      <header className="header">CV CREATOR</header>
+      <main className="main-container">
+        <div className="input-container">
           <Personal handleSavePersonalInformation={handleSavePersonalInformation} personalInformation={personalInformation}/>
           <div>
-        <div>
-          <Education handleSaveEducationInformation={handleSaveEducationInformation} educationInformation={educationInformation}/>
+          <div>
+            <Education handleSaveEducationInformation={handleSaveEducationInformation} educationInformation={educationInformation}/>
         </div>
             <h3>Experience(s)</h3>
             {experiences.map((experience) => {
@@ -119,12 +120,12 @@ function App(){
                 />
               );
             })}
-            <button onClick={() => addExperience()}>
+            <button onClick={() => addExperience()} className="add-experience">
               Add Experience
             </button>
-            </div>
         </div>
-        <div>
+        </div>
+        <div className="output-container">
           <Displaycv 
             personalInformation={personalInformation} 
             educationInformation={educationInformation}

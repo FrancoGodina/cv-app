@@ -21,7 +21,7 @@ function Experience(props) {
 
     return (
         <div>
-            <form>
+            <form className="form">
                 <input
                     type="text"
                     id="position"
@@ -51,7 +51,7 @@ function Experience(props) {
                     onChange={(e) => setTo(e.target.value)}
                 />
             </form>
-            <button
+            <button className="save-experience"
                 onClick={() =>
                     props.handleSaveExperience(
                         props.id,
@@ -62,7 +62,7 @@ function Experience(props) {
                     )
                 }
             >Save</button>
-            <button
+            <button className="delete-experience"
                 onClick={() => props.handleDeleteExperience(props.id)}>Delete</button>
         </div>
     );

@@ -15,7 +15,7 @@ function Education(props){
 
     return (
         <div>
-            <form>
+            <form className="form">
                 <h3>Education</h3>
                 <input
                     type="text"
@@ -39,7 +39,7 @@ function Education(props){
                     onChange={(e) => setDate(e.target.value)}
                 />
             </form>
-            <button
+            <button className="save"
                 onClick={() => props.handleSaveEducationInformation (school, title, date) } >
                 Save
             </button>
