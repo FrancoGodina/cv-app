@@ -93,7 +93,7 @@ function App(){
     });
 
     const updatedExperiences = [...experiences];
-    updatedExperiences.splice(indexToDelete,1 );
+    updatedExperiences.splice(indexToDelete, 1);
     setExperiences(updatedExperiences);
   }
 

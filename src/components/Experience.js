@@ -17,7 +17,7 @@ function Experience(props) {
                 }
             });
         }
-    }, [props.experiences])
+    }, [props.experiences, props.id])
 
     return (
         <div>
@@ -53,7 +53,7 @@ function Experience(props) {
             </form>
             <button
                 onClick={() =>
-                    props.handleExperienceSave(
+                    props.handleSaveExperience(
                         props.id,
                         position,
                         company,
