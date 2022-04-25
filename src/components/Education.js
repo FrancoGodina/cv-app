@@ -16,6 +16,7 @@ function Education(props){
     return (
         <div>
             <form className="form">
+                <br></br>
                 <h3>Education</h3>
                 <input
                     type="text"
@@ -32,7 +33,7 @@ function Education(props){
                     onChange={(e) => setTitle(e.target.value)}
                 />
                 <input
-                    type="text"
+                    type="date"
                     id="date"
                     placeholder="Date of study"
                     value={date}

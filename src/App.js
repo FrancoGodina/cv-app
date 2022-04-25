@@ -108,7 +108,6 @@ function App(){
           <div>
             <Education handleSaveEducationInformation={handleSaveEducationInformation} educationInformation={educationInformation}/>
         </div>
-            <h3>Experience(s)</h3>
             {experiences.map((experience) => {
               return (
                 <Experience

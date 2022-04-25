@@ -22,6 +22,8 @@ function Experience(props) {
     return (
         <div>
             <form className="form">
+                <br></br>
+                <h3>Experience(s)</h3>
                 <input
                     type="text"
                     id="position"
@@ -37,20 +39,21 @@ function Experience(props) {
                     onChange={(e) => setCompany(e.target.value)}
                 />
                 <input
-                    type="text"
+                    type="date"
                     id="from"
                     placeholder="Starting date"
                     value={from}
                     onChange={(e) => setFrom(e.target.value)}
                 />
                 <input
-                    type="text"
+                    type="date"
                     id="to"
                     placeholder="Ending date"
                     value={to}
                     onChange={(e) => setTo(e.target.value)}
                 />
             </form>
+            <br></br>
             <button className="save-experience"
                 onClick={() =>
                     props.handleSaveExperience(

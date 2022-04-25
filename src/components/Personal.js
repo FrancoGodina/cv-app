@@ -36,14 +36,14 @@ function Personal (props) {
                     onChange={(e) => setTitle(e.target.value)}
                 />
                 <input
-                    type="text"
+                    type="email"
                     id="email"
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <input
-                    type="text"
+                    type="number"
                     id="phone"
                     placeholder="Phone number"
                     value={phone}
